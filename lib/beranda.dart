@@ -16,43 +16,35 @@ class _BerandaState extends State<Beranda> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: new AppBar(
-          title: Row(
+          title: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               //search box
               Container(
-                margin: EdgeInsets.all(20),
-                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+                height: 40,
+                width: 600,
+                margin: EdgeInsets.only(top: 5, bottom: 5, left: 10, right: 10),
+                padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(30),
                   border: Border.all(
-                    color: Colors.black,
+                    color: Colors.white,
+                  ),
+                  color: Colors.white,
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    icon: Icon(Icons.search),
+                    hintText: "cari sesuatu",
+                    hintStyle: TextStyle(color: Colors.grey),
                   ),
                 ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'cari sesuatu',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.blueGrey,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
               ),
+              //search box
             ],
           ),
           backgroundColor: Colors.red,
-          leading: Icon(Icons.search),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.notifications),
@@ -225,36 +217,7 @@ class _BerandaState extends State<Beranda> {
             ),
           ),
           //fitur end
-          //search box
-          Container(
-            margin: EdgeInsets.all(20),
-            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(
-                color: Colors.black,
-              ),
-            ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'cari sesuatu',
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.blueGrey,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ), //searchbox
+
           //........//
           //promo start
           Container(

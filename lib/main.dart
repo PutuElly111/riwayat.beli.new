@@ -4,6 +4,7 @@ import 'package:flutter_sqlite/controler.dart';
 import 'package:flutter_sqlite/login/formlogin.dart';
 import 'package:flutter_sqlite/ui/entryform.dart';
 import 'package:flutter_sqlite/ui/home.dart';
+import 'package:flutter_sqlite/ui/body.dart';
 
 void main() {
   runApp(new MaterialApp(
